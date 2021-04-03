@@ -9,10 +9,7 @@ export default class List {
   }
 // GO BACK TO HERE
   get Template() {
-    // let tasks = ProxyState.tasks;
     let tasks = ProxyState.tasks.filter(task => task.listId == this.id)
-    // console.log(tasks, this.title)
-    console.log( tasks.filter((task) => task.completed == true).length);
     return /*html*/ `
         <div class="col-md-3 my-4">
                     <div class="card shadow rounded">
@@ -28,7 +25,7 @@ export default class List {
                         <form onsubmit="app.tasksController.addTask('${this.id}')">
                             <div class="form-row d-flex">
                                 <div class="col-8">
-                                <input type="text" name="task" class="form-control" placeholder="Add Task...">
+                                <input type="text" name="task" class="form-control" required minlength="3" maxlength="50" placeholder="Add Task...">
                                 </div>
                                 <div class="col-2">
                                 <button type="submit" class="btn bg-dark text-white ml-2" title="add task"><i class="fas fa-plus-square"></i></button>

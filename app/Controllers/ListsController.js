@@ -35,6 +35,8 @@ export default class ListsController {
   }
 
   deleteList(id) {
-    listsService.deleteList(id);
+    let confirm = window.confirm("Are you sure you want to delete this list?");
+    if(confirm) listsService.deleteList(id);
+    return;
   }
 }

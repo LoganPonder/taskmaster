@@ -10695,4 +10695,8 @@ main {
   flex-grow: 1;
 }
 
+i:hover {
+  cursor: pointer;
+}
+
 /*# sourceMappingURL=main.css.map */
