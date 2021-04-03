@@ -14,7 +14,7 @@ export default class List {
         <div class="col-md-3 my-4">
                     <div class="card shadow rounded">
                         <div class="card-body">
-                            <div class="list-header bg-${this.color} pl-1">
+                            <div class="list-header ${this.color} pl-1">
                                 <i class="fas fa-times fa-2x p-1" onclick="app.listsController.deleteList('${this.id}')"></i>
                                 <h5 class="text-center">${this.title}</h5>
                                 <p class="text-center">${tasks.filter(task => task.checked).length}/${tasks.length}</p>
