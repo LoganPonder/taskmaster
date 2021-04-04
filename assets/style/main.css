@@ -10702,10 +10702,6 @@ i:hover {
   cursor: pointer;
 }
 
-.nav-header {
-  border-bottom: 1rem solid #3c6e71;
-}
-
 .check-bg {
   position: absolute;
   top: -20%;

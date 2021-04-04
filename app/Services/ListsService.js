@@ -9,6 +9,7 @@ class ListsService {
 
     deleteList(id) {
         ProxyState.lists = ProxyState.lists.filter(list => list.id != id);
+        ProxyState.tasks = ProxyState.tasks;
         saveState();
     }
 }
