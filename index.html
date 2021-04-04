@@ -8,64 +8,65 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Montserrat&display=swap" rel="stylesheet">    
     <link rel="stylesheet" href="assets/style/main.css">
     <title>taskmaster</title>
 </head>
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand blue text-light">
-            <a class="navbar-brand" href="#">
-                <img src="assets/img/logo.png" width="45" height="45" alt="" loading="lazy">
-                <span class="ml-2">TASK MASTER</span>
+        <nav class="navbar navbar-dark navbar-expand blue text-light pb-0 pt-2 nav-header">
+            <a class="navbar-brand d-flex align-items-baseline" href="#">
+                <i class="fas fa-tasks logo-icon"></i>
+                <p class="nav-text ml-2">Task <span class="nav-logo">MASTER</span></p>
             </a>
         </nav>
     </header>
     <main class="py-5">
-        <div class="container-fluid">
-        <div class="row">
-            <div class="col">
-                <h1 class="display-2">Task Master</h1>
+        <i class="far fa-check-circle check-bg"></i>
+        <div class="row justify-content-center">
+            <div class="container-fluid">
+                <div class="col-md-12">
+                    <h1 class="display-1">Task <span class="title-font">Master</span></h1>
             </div>
             <div class="col-md-12">
                 <form onsubmit="app.listsController.createList()">
                     <div class="form-row">
                         <div class="col-3">
-                        <input type="text" id="title" class="form-control" minlength="3" maxlength="15" required placeholder="List Title...">
+                        <input type="text" id="title" class="form-control shadow" minlength="3" maxlength="15" required placeholder="List Title...">
                         </div>
 
                         <div class="col-1">
-                        <div class="form-group">
+                        <div class="form-group shadow">
                             <select class="form-control" id="listColor">
                             <option>blue</option>
                             <option>green</option>
                             <option>orange</option>
-                            <option>white</option>
-                            <option>black</option>
+                            <option>light</option>
+                            <option>dark</option>
                             </select>
                         </div>
                         </div>
 
                         <div class="col-1">
-                        <button type="submit" class="btn bg-dark text-white ml-2" title="create list">Create List</button>
+                        <button type="submit" class="btn bg-dark text-white ml-2 shadow" title="create list">Create List</button>
                         </div>
                     </div>
                 </form>
             </div>
-        </div>
+            </div>
         </div>
         <!-- END FORM -->
 
         <!-- LISTS -->
         <div class="container-fluid">
-            <div class="row pt-5 justify-content-around" id="lists">
-                <div class="col-md-3">
-                   
-                </div>
+            <div class="row pt-5" id="lists">
+                
             </div>
         </div>
     </main>
-    <footer class="container-fluid bg-dark text-light">
+    <footer class="container-fluid blue text-light pt-2">
         <div class="row text-center">
             <div class="col">
                 <p><small>Made with love & a bit of frustration, by Logan</small></p>

@@ -16,7 +16,7 @@ export default class TasksController {
   }
 
   deleteTask(taskId) {
-      let confirm = window.confirm("Are you sure you want to delete this list?");
+      let confirm = window.confirm("Are you sure you want to delete this task?");
       if (confirm) tasksService.deleteTask(taskId);
       return;
   }

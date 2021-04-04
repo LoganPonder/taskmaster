@@ -11,7 +11,7 @@ export default class Task {
 
   get Template() {
     return `
-    <div class="task d-flex align-items-baseline justify-content-around">
+    <div class="task d-flex align-items-baseline justify-content-around list-text-font pt-3 bg-white">
         <input type="checkbox" ${this.checked ? 'checked' : ''} onclick="app.tasksController.toggle('${this.id}')" class="">
         <p>${this.title}</p>
         <i class="fas fa-trash" onclick="app.tasksController.deleteTask('${this.id}')"></i>
